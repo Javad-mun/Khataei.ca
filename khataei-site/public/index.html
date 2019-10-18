@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <title>Khataei</title>
+
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Javad" />
+<meta name="author" content="Javad" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.58.3" />        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">        <link rel="manifest" href="site.webmanifest">        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="favicon.ico">        
+
+
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+
+  <link
+    id="color-CSS"
+    rel="stylesheet"
+    href="/css/aafu_dark.css"
+    type="text/css"
+  />
+  <link rel="stylesheet" href="/css/aafu.css" />
+
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = function() {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active")
+        .nextElementSibling;
+      defaultActivePanel.style.maxHeight =
+        defaultActivePanel.scrollHeight + "px";
+    };
+    window.onresize = function() {
+      document.querySelector(".active").nextElementSibling.style.maxHeight =
+        document.querySelector(".active").nextElementSibling.scrollHeight +
+        "px";
+    };
+  </script>
+</head>
+<body class="container" style="max-width: 1400px;">
+<div class="ml-auto mr-auto row row-eq-height rounded">
+  <div class="col-md-5 text-center p-2 mt-3">
+    <div class="profile-area rounded text-center position-relative">
+      
+<div class="toggleSwitchContainer" style="width: 45px; height: 45px;">
+  <i
+    class="fas fa-toggle-on zoomlink"
+    id="toggle"
+    title="Toggle Theme"
+    onclick="toggleTheme(this)"
+  ></i>
+</div>
+
+<script>
+  const mainTheme =
+    "\/css\/aafu_dark.css";
+  const altTheme =
+    "\/css\/aafu_pinkish.css";
+  const currentCSS = document.querySelector("#color-CSS");
+  function toggleTheme(elem) {
+    
+    
+    elem.classList.toggle("fa-toggle-off");
+    elem.classList.toggle("fa-toggle-on");
+    if (currentCSS.href.includes(mainTheme)) {
+      currentCSS.setAttribute("href", "." + altTheme);
+    } else {
+      currentCSS.setAttribute("href", "." + mainTheme);
+    }
+  }
+
+  function changeThemeColor() {
+    themeColor.content = getComputedStyle(document.body)["background-color"];
+  }
+  const thisBody = document.body;
+  thisBody.addEventListener("webkitTransitionEnd", changeThemeColor);
+  thisBody.addEventListener("transitionend", changeThemeColor);
+</script>
+
+
+      <div class="d-flex justify-content-center pt-2">
+  <div class="w-100 h-100">
+    <img
+      class="rounded rounded-circle mt-4"
+      src="/images/profile.jpg"
+      alt="Javad"
+      style="width: 95%; max-width: 300px;"
+    />
+  </div>
+</div>
+
+      <div class="p-2">
+        <h1 class="mb-0">Javad Khataei</h1>
+<h2 class="mb-0">Data Scientist at Beap Lab</h2>
+<h3 class="mb-0">Canada</h3>
+<div class="mt-2 d-flex flex-wrap justify-content-center">
+  
+  <div style="height:45px; width:45px;">
+    <a href="https://www.linkedin.com/in/khataei/">
+      <i class="zoomlink mt-1 fab fa-linkedin-in"></i>
+    </a>
+  </div>
+  
+  <div style="height:45px; width:45px;">
+    <a href="https://github.com/javad-mun">
+      <i class="zoomlink mt-1 fab fa-github"></i>
+    </a>
+  </div>
+  
+</div>
+
+        <footer class="mb-4">
+  <span class="markdownify"></span>
+  <span style="font-size:0px;">
+    &middot;
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </span>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-7 pt-2 mt-3">
+    
+    <h2 class="accordion  active ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-user"></i>
+        About Me</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      <p class="markdownify">
+  I have a master’s degree in computer science from <em>Memorial University</em>. At the <em>BEAP lab</em>, I enjoy working with data and applying machine learning algorithms to it. <strong>R</strong> and <strong>Python</strong> are my favourite languages, and I like developing packages to help other R users too.
+</p>
+
+    </div>
+    
+    <h2 class="accordion ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-briefcase"></i>
+        Experiences</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      
+<dl>
+  <dt class="mb-0">
+    <b> Junior Data Scientist</b>
+  </dt>
+  <dd class="mb-0 ml-3">
+    <span class="markdownify"><i>Apr 2019 - <em>Present</em></i></span>
+    &middot;
+    
+    <a href="http://www.beaplab.com/home/team/">Beap Lab</a>
+    
+  </dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Processes, prepares and cleans wearable sensors’ data for further statistical analysis with Python or R.</li>
+</ul></dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Develops detection and classification algorithms using machine learning and signal processing tools.</li>
+</ul></dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Creates and maintains R packages to produce reusable codes.</li>
+</ul></dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Assists lab members with their data analysis, machine learning and data mining questions.</li>
+</ul></dd>
+</dl>
+
+<dl>
+  <dt class="mb-0">
+    <b>Junior Android Developer</b>
+  </dt>
+  <dd class="mb-0 ml-3">
+    <span class="markdownify"><i>Apr 2017 - Aug 2017</i></span>
+    &middot;
+    
+    <a href="http://www.netray.ir">Netray</a>
+    
+  </dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Developed Android applications, and gained experience in Java, SQL, and Python.</li>
+</ul></dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Assisted the development team in improving code quality through testing and code reviews.</li>
+</ul></dd>
+  <dd class="mb-0 ml-4 markdownify"></dd>
+  <dd class="mb-0 ml-4 markdownify"></dd>
+</dl>
+
+<dl>
+  <dt class="mb-0">
+    <b>Data Analyst</b>
+  </dt>
+  <dd class="mb-0 ml-3">
+    <span class="markdownify"><i>Apr 2015 - Feb 2017</i></span>
+    &middot;
+    
+    <a href="http://www.sealandws.com">SeaLand well services</a>
+    
+  </dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Processed and analyzed drilling data and presented KPIs.</li>
+</ul></dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Supervised drilling rig crews and monitored their performance.</li>
+</ul></dd>
+  <dd class="mb-0 ml-4 markdownify"></dd>
+  <dd class="mb-0 ml-4 markdownify"></dd>
+</dl>
+
+<dl>
+  <dt class="mb-0">
+    <b>Computer Technician</b>
+  </dt>
+  <dd class="mb-0 ml-3">
+    <span class="markdownify"><i>Apr 2013 - Feb 2015</i></span>
+    &middot;
+    
+    <a href="http://www.en.sharif.edu/">Sharif University of Technology</a>
+    
+  </dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Provided the network users with technical computer consultation.</li>
+</ul></dd>
+  <dd class="mb-0 ml-4 markdownify"><ul>
+<li>Installed and upgraded software and hardware to maintain network.</li>
+</ul></dd>
+  <dd class="mb-0 ml-4 markdownify"></dd>
+  <dd class="mb-0 ml-4 markdownify"></dd>
+</dl>
+
+
+    </div>
+    
+    <h2 class="accordion ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-graduation-cap"></i>
+        Education</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      
+<dl>
+  <dt>M.S. in Computer Science</dt>
+  <dd class="mb-0 ml-3">2017 - 2019 &middot; Memorial University of Newfoundland</dd>
+  
+</dl>
+
+<dl>
+  <dt>M.S. in Reservoir Engineering</dt>
+  <dd class="mb-0 ml-3">2010 - 2012 &middot; University of Tehran</dd>
+  
+</dl>
+
+<dl>
+  <dt>B.S. in Petroleum Engineering</dt>
+  <dd class="mb-0 ml-3">2005 - 2010 &middot; Sharif University of Technology</dd>
+  
+</dl>
+
+
+    </div>
+    
+    <h2 class="accordion ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-cogs"></i>
+        Skills</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+      id="skill-panel"
+      
+    >
+      <script>
+  let skillPanel = document.querySelector("#skill-panel")
+    .previousElementSibling;
+  skillPanel.addEventListener("click", function() {
+    let skillBars = document.querySelectorAll("#skill-percent");
+    skillBars.forEach(elem => {
+      elem.style.width = elem.classList[0];
+    });
+  });
+</script>
+
+<code>R, Tidyverse</code>
+<div class="w-100 skillbar mt-1 mb-3">
+  <div id="skill-percent" class="85%" style="width: 0;"></div>
+</div>
+
+<code>Python, Numpy, Pandas</code>
+<div class="w-100 skillbar mt-1 mb-3">
+  <div id="skill-percent" class="70%" style="width: 0;"></div>
+</div>
+
+<code>Java, Keras, SQL</code>
+<div class="w-100 skillbar mt-1 mb-3">
+  <div id="skill-percent" class="65%" style="width: 0;"></div>
+</div>
+
+<code>Machine Learning</code>
+<div class="w-100 skillbar mt-1 mb-3">
+  <div id="skill-percent" class="80%" style="width: 0;"></div>
+</div>
+
+<code>Data Cleaning</code>
+<div class="w-100 skillbar mt-1 mb-3">
+  <div id="skill-percent" class="90%" style="width: 0;"></div>
+</div>
+
+
+    </div>
+    
+    <h2 class="accordion ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-book"></i>
+        Certification</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      
+
+
+<h4 style="text-decoration: underline;">Coursera</h4><p>
+
+<a href="https://www.coursera.org/account/accomplishments/certificate/8USA24Y43HJ3?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate">
+  <em> - Python data structures.</em>
+</a>
+
+
+By University of Michigan.
+Jan 2018.
+</p>
+<p>
+
+<a href="https://www.coursera.org/account/accomplishments/certificate/5MN8SU4DRZQ5?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate">
+  <em> - Introduction to Structured Query Language (SQL).</em>
+</a>
+
+
+By University of Michigan.
+Jan 2018.
+</p>
+<p>
+
+<a href="https://www.coursera.org/account/accomplishments/certificate/N6DUA8FFN5GS?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate">
+  <em> - Getting Started with Python.</em>
+</a>
+
+
+By University of Michigan.
+Jan 2018.
+</p>
+
+
+
+
+    </div>
+    
+    <h2 class="accordion ">
+      
+      <span onclick="expandAccordion(this)" style="cursor: pointer;">
+        <i class="fas fa-project-diagram"></i>
+        Projects</span>
+    </h2>
+    <div
+      class="panel overflow-hidden"
+      
+    >
+      <dl>
+  
+  <dt>
+    <a href="https://cran.r-project.org/web/packages/activityCounts/index.html" style="font-variant: small-caps; ">ActivityCounts Package</a>
+  </dt>
+  <dd class="mb-0 ml-3 markdownify">An R package to calculate Actilife activity counts, available on CRAN</dd>
+  
+  <dt>
+    <a href="https://github.com/Javad-mun/Beap" style="font-variant: small-caps; ">Beap Package</a>
+  </dt>
+  <dd class="mb-0 ml-3 markdownify">An R package for modeling and classifying physical activity</dd>
+  
+  <dt>
+    <a href="https://github.com/Javad-mun/DYNOBAL" style="font-variant: small-caps; ">DYNOBAL</a>
+  </dt>
+  <dd class="mb-0 ml-3 markdownify">Software to estimate underground oil reservoir volume written in C#</dd>
+  
+</dl>
+
+    </div>
+    
+    <script src="/js/accordion.js"></script>
+  </div>
+</div>
+
+  </body>
+</html>
